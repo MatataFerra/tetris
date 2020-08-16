@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+
+}
+
+.grid{
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    
+}
+
+
+
+.grid div {
+    height: 25px;
+    width: 25px;
+    outline: auto rgba(63, 62, 62, 0.719) 0.1rem;
+    outline-offset: -1px;
+}
+
+.black {
+    background: rgb(49, 49, 49);
+    text-align: center;
+    line-height: 25px;
+    color: antiquewhite;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    visibility: hidden;
+}
+.tetromino{
+    background-color: blueviolet;
+}
+
+.mini-grid {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: aquamarine;
+    margin-left: 50px;
+    margin-top: 1rem;
+}
+
+.mini-grid div {
+    height: 25px;
+    width: 25px;
+    outline: auto rgba(63, 62, 62, 0.719) 0.1rem;
+    outline-offset: -1px;
+}
+
