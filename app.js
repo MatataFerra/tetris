@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", startGame);
 
 function startGame() {
-  const grid = document.querySelector(".grid");
-  let squares = Array.from(document.querySelectorAll(".grid div"));
+  const grid = document.querySelector(".tetris-grid");
+  let squares = Array.from(document.querySelectorAll(".tetris-grid div"));
   const scoreDisplay = document.querySelector("#score");
   const startBtn = document.querySelector("#start-button");
   const width = 10;
@@ -12,9 +12,10 @@ function startGame() {
   const colors = ["#CEB1F0", "#F2823D", "#66EFF2", "#F0EF8D", "#A4B8EF"];
 
   //easter egg
-  const finalRow = document.querySelectorAll(".black");
+  const finalRow = document.querySelectorAll(".tetris-black");
+  const hackButton = document.getElementById('hack')
 
-  document.addEventListener("dblclick", () => {
+  const hackTetris = () => {
     finalRow.forEach((x) => {
       x.style.visibility = "visible";
     });
@@ -24,13 +25,15 @@ function startGame() {
     let trick = confirm("do yo wanna more points?");
 
     if (trick) {
-      score = 90;
+      score = score + 90;
       scoreDisplay.innerHTML = score;
       alert("you got it, don´t tell to anyone :)");
       setTimeout(() => {
         alert("sorry, I hate the cheaters");
+        score = score - 150
+        scoreDisplay.innerHTML = score
         gameOver();
-      }, 250);
+      }, 2000);
     } else {
       alert("good for you");
       draw();
@@ -38,7 +41,9 @@ function startGame() {
       nextRandom = Math.floor(Math.random() * theTetrominoes.length);
       displayShape();
     }
-  });
+  }
+
+  hackButton.addEventListener('click', hackTetris)
 
   const lTetromino = [
     [1, width + 1, width * 2 + 1, 2],
@@ -203,7 +208,7 @@ function startGame() {
 
   //show up-next
 
-  const displaySquares = document.querySelectorAll(".mini-grid div");
+  const displaySquares = document.querySelectorAll(".tetris-mini-grid div");
   const displayWidth = 4;
   const displayIndex = 0;
 

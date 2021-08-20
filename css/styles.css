@@ -1,4 +1,4 @@
-.container {
+.tetris-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,7 +7,7 @@
           justify-content: center;
 }
 
-.title-container {
+.tetris-title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +20,7 @@
           align-items: center;
 }
 
-.grid {
+.tetris-grid {
   width: 250px;
   height: 500px;
   display: -webkit-box;
@@ -31,7 +31,7 @@
   margin-top: 1rem;
 }
 
-.grid div {
+.tetris-grid div {
   height: 25px;
   width: 25px;
   outline: solid rgba(63, 62, 62, 0.719) 0.1rem;
@@ -44,7 +44,11 @@
   width: fit-content;
 }
 
-.black {
+#hack {
+  opacity: 0;
+}
+
+.tetris-black {
   background: #313131;
   text-align: center;
   line-height: 25px;
@@ -58,7 +62,7 @@
   background-color: blueviolet;
 }
 
-.mini-grid {
+.tetris-mini-grid {
   width: 100px;
   height: 100px;
   display: -webkit-box;
@@ -76,7 +80,7 @@
   margin-top: 1rem;
 }
 
-.mini-grid div {
+.tetris-mini-grid div {
   height: 25px;
   width: 25px;
   outline: auto rgba(63, 62, 62, 0.719) 0.1rem;
